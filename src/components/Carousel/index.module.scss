@@ -1,0 +1,20 @@
+@use "../../assets/styles/colors";
+
+.carousel {
+	width: 100%;
+	position: relative;
+}
+
+img {
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+
+	&:first-child {
+		z-index: 1;
+	}
+
+	&:last-child {
+		z-index: -1;
+	}
+}
