@@ -1,20 +1,35 @@
-@use "../../assets/styles/colors";
+@use "../../assets/styles/colors" as c;
 
 .carousel {
 	width: 100%;
 	position: relative;
 }
 
-img {
+.carousel > img {
 	width: 100%;
 	object-fit: cover;
+}
+
+.btn-group {
 	position: absolute;
+	right: 0;
+	bottom: 0;
 
-	&:first-child {
-		z-index: 1;
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
 	}
+}
 
-	&:last-child {
-		z-index: -1;
+button {
+	background-color: c.$black;
+	border: none;
+	outline: none;
+	padding: 20px;
+	float: left;
+
+	img {
+		width: 10px;
 	}
 }
