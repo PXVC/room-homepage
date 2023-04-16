@@ -14,7 +14,7 @@ function Navbar() {
 
 	return (
 		<>
-			<nav className={isExpand ? "expand" : ""}>
+			<nav className={isExpand ? classes["expand"] : ""}>
 				<img src={CloseIcon} alt="close icon" onClick={() => handleExpand()} />
 				<ul>
 					<li>home</li>

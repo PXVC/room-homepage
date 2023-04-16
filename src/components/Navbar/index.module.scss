@@ -14,7 +14,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	transform: translateY(-100%);
-	transition: width 0.2s cubic-bezier(0.42, 0, 0.5, 1.05);
+	transition: transform 0.2s cubic-bezier(0.42, 0, 0.5, 1.05);
 
 	ul {
 		font-size: 1.7rem;
@@ -43,10 +43,21 @@ nav {
 			}
 		}
 	}
-}
 
-.expand {
-	transform: translateY(0);
+	&.expand {
+		transform: translateY(0);
+
+		&::after {
+			content: "";
+			width: 100vw;
+			height: calc(100vh - 100%);
+			background-color: c.$black;
+			opacity: 0.5;
+			position: absolute;
+			left: 0;
+			top: 100%;
+		}
+	}
 }
 
 header {
