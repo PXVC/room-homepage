@@ -2,12 +2,16 @@
 
 nav,
 header {
-	position: absolute;
 	width: 100vw;
 	padding: 13% 6.3%;
 }
 
+header {
+	position: absolute;
+}
+
 nav {
+	position: fixed;
 	z-index: 999;
 	background-color: #fff;
 	display: flex;
