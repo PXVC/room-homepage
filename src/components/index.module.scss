@@ -1,0 +1,40 @@
+@use "../assets/styles/colors" as c;
+
+.textBox {
+	padding: 60px 45px;
+
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		color: c.$black;
+	}
+
+	p {
+		font-size: 1.73rem;
+		color: c.$dark-gray;
+		line-height: 1.43em;
+		margin-top: 1em;
+	}
+
+	a {
+		font-size: 1.7rem;
+		font-weight: 600;
+		letter-spacing: 13px;
+		color: c.$very-dark-gray;
+		text-decoration: none;
+		display: inline-block;
+		margin-top: 2.5em;
+
+		img {
+			vertical-align: middle;
+		}
+
+		&:hover {
+			color: c.$dark-gray;
+
+			img {
+				opacity: 0.5;
+			}
+		}
+	}
+}
