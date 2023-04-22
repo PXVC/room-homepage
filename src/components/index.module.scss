@@ -9,6 +9,11 @@
 		color: c.$black;
 	}
 
+	h2 {
+		font-size: 1.7rem;
+		letter-spacing: 0.35em;
+	}
+
 	p {
 		font-size: 1.73rem;
 		color: c.$dark-gray;
@@ -37,4 +42,9 @@
 			}
 		}
 	}
+}
+
+img[alt="about"] {
+	width: 100%;
+	object-fit: cover;
 }
