@@ -16,7 +16,7 @@ function Carousel({ isMobile }) {
 	};
 
 	return (
-		<div className={classes["carousel"]}>
+		<div className={classes.carousel}>
 			{isMobile ? (
 				<img
 					src={require(`../../assets/images/mobile-image-hero-${slide}.jpg`)}
@@ -29,7 +29,7 @@ function Carousel({ isMobile }) {
 				/>
 			)}
 
-			<div className={classes["btn-group"]}>
+			<div className={classes.btnGroup}>
 				<button onClick={() => handleToggleLeft()}>
 					<img src={leftIcon} alt="left-icon" />
 				</button>
