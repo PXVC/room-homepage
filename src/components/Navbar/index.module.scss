@@ -1,4 +1,5 @@
 @use "../../assets/styles/colors" as c;
+@use "../../assets/styles/responsive" as r;
 
 nav,
 header {
@@ -13,8 +14,8 @@ header {
 nav {
 	position: fixed;
 	z-index: 999;
-	background-color: #fff;
 	display: flex;
+	background-color: c.$white;
 	align-items: center;
 	justify-content: space-between;
 	transform: translateY(-100%);
@@ -81,4 +82,49 @@ img[alt="room's logo"] {
 
 img[alt="close icon"] {
 	cursor: pointer;
+}
+
+@media screen and (min-width: r.$tablet) {
+	nav,
+	header {
+		padding: 10% 6.3%;
+	}
+
+	nav {
+		position: absolute;
+		transform: unset;
+		background-color: unset;
+		margin-left: calc(6.3% + 50px);
+
+		img {
+			display: none;
+		}
+
+		ul {
+			font-weight: 500;
+			color: c.$white;
+
+			li::after {
+				background-color: c.$white;
+			}
+		}
+	}
+
+	header {
+		:first-child {
+			display: none;
+		}
+
+		:last-child {
+			left: 6.3%;
+			transform: unset;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	header,
+	nav {
+		padding: 60px 50px;
+	}
 }

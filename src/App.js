@@ -1,17 +1,18 @@
+import { useMediaQuery } from "react-responsive";
+
 import Carousel from "./components/Carousel";
 import Navbar from "./components/Navbar";
 
 import classes from "./components/index.module.scss";
-
 import ArrowIcon from "./assets/images/icon-arrow.svg";
 
 function App() {
 	return (
 		<>
-			<div className="header">
+			<div className={classes.header}>
 				<Navbar />
 				<section>
-					<Carousel isMobile={true} />
+					<Carousel isMobile={useMediaQuery({ query: "(max-width: 500px)" })} />
 					<div className={classes.textBox}>
 						<h1>Discover innovative ways to decorate</h1>
 						<p>
@@ -26,7 +27,7 @@ function App() {
 					</div>
 				</section>
 			</div>
-			<section>
+			<section className={classes.body}>
 				<img src={require("./assets/images/image-about-dark.jpg")} alt="about" />
 				<div className={classes.textBox}>
 					<h2>ABOUT OUR FURNITURE</h2>
